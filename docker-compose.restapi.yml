@@ -1,0 +1,60 @@
+version: '3.3'
+
+services:
+
+  # Define SpringBootRestAPI container
+  springbootrestapi:
+    build: .            #docker file path (. means root directory)
+    image: springbootrestapi:latest
+    container_name: springbootrestapi
+    ports:
+      - "8084:8084"
+    expose:
+      - "8084"
+    depends_on:
+      - mysql-dev
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-dev:3306/golangdb?createDatabaseIfNotExist=true
+#      SPRING_DATASOURCE_USERNAME: root
+#      SPRING_DATASOURCE_PASSWORD: password
+    networks:
+      - spring-mysql-network
+    # restart: always
+
+  # define mysql container service
+  mysql-dev:
+    image: mysql:8.0.19
+    container_name: mysql-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: golangdb
+    ports:
+      - "3306:3306"
+    volumes:    
+#     - my.conf:etc/mysql/conf.d/config-file.cnf
+      - .mysql-data:/var/lib/mysql:rw
+    networks:
+      - spring-mysql-network
+    #restart: always
+ 
+#Adminer Database management in a single PHP file.
+  admin:
+    image: adminer
+    container_name: adminer
+    ports:
+       - "8080:8080"
+    networks:
+      - spring-mysql-network
+  # http://mysql-dev:8080/
+
+# Volumes
+volumes:
+  mysql-data:
+
+# networks
+networks:
+  spring-mysql-network:
+    name: spring-mysql-net
+    driver: bridge
+  
+  

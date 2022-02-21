@@ -1,0 +1,22 @@
+
+# MySql DB Credential
+spring:
+  application:
+    name: springbootrestapi
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-dev:3306/golangdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    #url: jdbc:mysql://mysql-dev:3306/golangdb?allowPublicKeyRetrieval=true&useSSL=false
+    #url: jdbc:mysql://localhost:3306/golangdb?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: password
+    #password: Arshita@10
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+server:
+  port: 8084

@@ -14,7 +14,7 @@ compileJava{
 
 /*
  * Run the bootJar task. It produces only the default runnable jar.
- * *
+ *
 bootJar {
 	baseName  "springbootrestapi"
 	version   '0.0.1'

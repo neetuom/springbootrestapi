@@ -12,9 +12,17 @@ compileJava{
 }
 
 
+/*
+ * Run the bootJar task. It produces only the default runnable jar.
+ *
 bootJar {
 	baseName  "springbootrestapi"
 	version   '0.0.1'
+}
+*/
+
+jar {
+	enabled = false  // This disables only the .plain jar, and not the full jar
 }
 
 repositories {

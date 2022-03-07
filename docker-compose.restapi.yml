@@ -5,7 +5,7 @@ services:
   # Define SpringBootRestAPI container
   springbootrestapi:
     build: .            #docker file path (. means root directory)
-    image: springbootrestapi:latest
+    image: neetuom/springbootrestapi:latest
     container_name: springbootrestapi
     ports:
       - "8084:8084"

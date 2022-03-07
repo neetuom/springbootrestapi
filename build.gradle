@@ -22,7 +22,7 @@ bootJar {
 */
 
 jar {
-	enabled = false  // This disables only the .plain jar, and not the full jar
+	enabled = true  // This disables only the .plain jar, and not the full jar
 }
 
 repositories {

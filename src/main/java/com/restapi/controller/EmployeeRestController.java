@@ -19,7 +19,7 @@ public class EmployeeRestController {
     EmployeeService employeeService;
 
     /*
-       GET - http://localhost:8080/employee/all
+       GET - http://localhost:8084/employee/all
      */
     @GetMapping("/all")
     public List<Employee> listOfEmployees() {
@@ -27,7 +27,7 @@ public class EmployeeRestController {
     }
 
     /*
-       GET - http://localhost:8080/employee/1
+       GET - http://localhost:8084/employee/1
      */
     @GetMapping("/{id}")
     public ResponseEntity<Employee> get(@PathVariable Integer id){
@@ -41,7 +41,7 @@ public class EmployeeRestController {
 
 
     /*
-       POST - http://localhost:8080/employee/
+       POST - http://localhost:8084/employee/
 
               {
                 "empname": "Varun Anand",
@@ -54,7 +54,7 @@ public class EmployeeRestController {
     }
 
     /*
-      PUT - http://localhost:8080/employee/1
+      PUT - http://localhost:8084/employee/1
             {
               "empname": "Ramesh Kumar",
               "empsalary": 100000
@@ -74,7 +74,7 @@ public class EmployeeRestController {
 
 
     /*
-       DELETE - http://localhost:8080/employee/2
+       DELETE - http://localhost:8084/employee/2
      */
     @DeleteMapping("/{id}")
     public  void delete(@PathVariable Integer id) {

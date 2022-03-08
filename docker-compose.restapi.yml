@@ -42,10 +42,10 @@ services:
     image: adminer
     container_name: adminer
     ports:
-       - "8080:8080"
+       - "8085:8085"
     networks:
       - spring-mysql-network
-  # http://mysql-dev:8080/
+  # http://mysql-dev:8085/
 
 # Volumes
 volumes:

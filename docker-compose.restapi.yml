@@ -37,7 +37,7 @@ services:
       - spring-mysql-network
     #restart: always
  
-#Adminer Database management in a single PHP file.
+#Adminer Database management in a single PHP file. #
   admin:
     image: adminer
     container_name: adminer

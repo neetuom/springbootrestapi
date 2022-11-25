@@ -5,12 +5,12 @@ spring:
     name: springbootrestapi
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-dev:3306/golangdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    #url: jdbc:mysql://mysql-dev:3306/golangdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
     #url: jdbc:mysql://mysql-dev:3306/golangdb?allowPublicKeyRetrieval=true&useSSL=false
-    #url: jdbc:mysql://localhost:3306/golangdb?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/golangdb?allowPublicKeyRetrieval=true&useSSL=false
     username: root
-    password: password
-    #password: Arshita@10
+    #password: password
+    password: Arshita@10
   jpa:
     properties:
       hibernate:
@@ -20,3 +20,7 @@ spring:
     show-sql: true
 server:
   port: 8084
+
+springdoc:
+  api-docs:
+    path: /restapi-docs

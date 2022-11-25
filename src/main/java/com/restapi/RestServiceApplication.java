@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //https://andriperera.medium.com/create-a-rest-api-in-spring-boot-with-mysql-b250ff3aaa9b
 @SpringBootApplication
-@OpenAPIDefinition(info = @Info(title="Promotion API",version="3.0",description="Promotion API"))
+@OpenAPIDefinition(info = @Info(title="SpringBootRestApi API",version="3.0",description="Promotion API"))
 public class RestServiceApplication {
 
     public static void main(String[] args) {

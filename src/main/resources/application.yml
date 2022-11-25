@@ -7,7 +7,7 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://mysql-dev:3306/golangdb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
     #url: jdbc:mysql://mysql-dev:3306/golangdb?allowPublicKeyRetrieval=true&useSSL=false
-    url: jdbc:mysql://localhost:3306/golangdb?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/golangdb
     username: root
     #password: password
     password: Arshita@10
